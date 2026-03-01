@@ -5,7 +5,11 @@
   "phone": "(518) 883-3431",
   "phoneLink": "tel:518-883-3431",
   "email": "brianm@fiberconversion.net",
-  "location": "New York",
+  "address": "15 E Elm St",
+  "city": "Broadalbin",
+  "state": "NY",
+  "zip": "12025",
+  "location": "15 E Elm St, Broadalbin, NY 12025",
   "businessHours": "Monday \u2013 Friday: 8:00 AM \u2013 5:00 PM",
   "footerDescription": "Recycling and processing textile byproducts for industrial use. A New York tradition of sustainability for over a century.",
   "url": "https://fiberconversion.net"

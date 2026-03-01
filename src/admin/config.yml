@@ -20,7 +20,11 @@ collections:
           - { label: "Phone Number (Display)", name: "phone", widget: "string" }
           - { label: "Phone Number (Link)", name: "phoneLink", widget: "string", hint: "Format: tel:XXX-XXX-XXXX" }
           - { label: "Email Address", name: "email", widget: "string" }
-          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Street Address", name: "address", widget: "string" }
+          - { label: "City", name: "city", widget: "string" }
+          - { label: "State", name: "state", widget: "string" }
+          - { label: "ZIP Code", name: "zip", widget: "string" }
+          - { label: "Full Location (Display)", name: "location", widget: "string", hint: "Full address as displayed on the site" }
           - { label: "Business Hours", name: "businessHours", widget: "string" }
           - { label: "Footer Description", name: "footerDescription", widget: "text" }
           - { label: "Website URL", name: "url", widget: "string" }
@@ -43,6 +47,9 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
               - { label: "Secondary Button Text", name: "secondaryButtonText", widget: "string" }
+              - { label: "Hero Background Image", name: "heroImage", widget: "image", required: false, hint: "Optional background photo. Recommended: 1920x1080px." }
+              - { label: "Hero Video URL (YouTube/Vimeo)", name: "heroVideoUrl", widget: "string", required: false, hint: "Paste a YouTube or Vimeo URL for background video." }
+              - { label: "Hero Video File (MP4)", name: "heroVideoFile", widget: "file", required: false, hint: "Upload an MP4 video for background video." }
               - label: "Stats"
                 name: "stats"
                 widget: "list"
@@ -64,6 +71,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Custom Icon Image", name: "image", widget: "image", required: false, hint: "Replace the default icon. Square image recommended." }
           - label: "About Preview"
             name: "aboutPreview"
             widget: "object"
@@ -76,6 +84,10 @@ collections:
               - { label: "Visual Number", name: "visualNumber", widget: "string" }
               - { label: "Visual Label", name: "visualLabel", widget: "string" }
               - { label: "Visual Description", name: "visualDescription", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false, hint: "Photo for this section. Recommended: 800x600px." }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
+              - { label: "Video URL (YouTube/Vimeo)", name: "videoUrl", widget: "string", required: false, hint: "YouTube or Vimeo URL." }
+              - { label: "Video File (MP4)", name: "videoFile", widget: "file", required: false, hint: "Self-hosted MP4 video." }
           - label: "Why Choose Us"
             name: "whyChooseUs"
             widget: "object"
@@ -89,6 +101,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Custom Icon Image", name: "image", widget: "image", required: false, hint: "Replace the default icon. Square image recommended." }
           - label: "Industries Section"
             name: "industriesSection"
             widget: "object"
@@ -102,6 +115,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "string" }
+                  - { label: "Custom Icon Image", name: "image", widget: "image", required: false, hint: "Replace the default icon. Square image recommended." }
           - label: "Dual CTA"
             name: "dualCta"
             widget: "object"
@@ -116,6 +130,7 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
                   - { label: "Button Text", name: "buttonText", widget: "string" }
+                  - { label: "Custom Icon Image", name: "image", widget: "image", required: false, hint: "Replace the default icon. Square image recommended." }
               - label: "Buy Card"
                 name: "buyCard"
                 widget: "object"
@@ -123,6 +138,7 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
                   - { label: "Button Text", name: "buttonText", widget: "string" }
+                  - { label: "Custom Icon Image", name: "image", widget: "image", required: false, hint: "Replace the default icon. Square image recommended." }
           - label: "CTA Banner"
             name: "ctaBanner"
             widget: "object"
@@ -146,6 +162,9 @@ collections:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Hero Background Image", name: "heroImage", widget: "image", required: false, hint: "Optional background photo. Recommended: 1920x1080px." }
+              - { label: "Hero Video URL (YouTube/Vimeo)", name: "heroVideoUrl", widget: "string", required: false, hint: "Paste a YouTube or Vimeo URL for background video." }
+              - { label: "Hero Video File (MP4)", name: "heroVideoFile", widget: "file", required: false, hint: "Upload an MP4 video for background video." }
           - label: "Heritage Section"
             name: "heritage"
             widget: "object"
@@ -159,6 +178,10 @@ collections:
               - { label: "Visual Suffix", name: "visualSuffix", widget: "string" }
               - { label: "Visual Label", name: "visualLabel", widget: "string" }
               - { label: "Visual Description", name: "visualDescription", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false, hint: "Photo for this section. Recommended: 800x600px." }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
+              - { label: "Video URL (YouTube/Vimeo)", name: "videoUrl", widget: "string", required: false, hint: "YouTube or Vimeo URL." }
+              - { label: "Video File (MP4)", name: "videoFile", widget: "file", required: false, hint: "Self-hosted MP4 video." }
           - label: "Values Section"
             name: "values"
             widget: "object"
@@ -172,6 +195,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Custom Icon Image", name: "image", widget: "image", required: false, hint: "Replace the default icon. Square image recommended." }
           - label: "Timeline Header"
             name: "timelineHeader"
             widget: "object"
@@ -216,6 +240,9 @@ collections:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Hero Background Image", name: "heroImage", widget: "image", required: false, hint: "Optional background photo. Recommended: 1920x1080px." }
+              - { label: "Hero Video URL (YouTube/Vimeo)", name: "heroVideoUrl", widget: "string", required: false, hint: "Paste a YouTube or Vimeo URL for background video." }
+              - { label: "Hero Video File (MP4)", name: "heroVideoFile", widget: "file", required: false, hint: "Upload an MP4 video for background video." }
           - label: "Overview Header"
             name: "overviewHeader"
             widget: "object"
@@ -229,6 +256,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Custom Icon Image", name: "image", widget: "image", required: false, hint: "Replace the default icon. Square image recommended." }
           - label: "Process Header"
             name: "processHeader"
             widget: "object"
@@ -255,6 +283,10 @@ collections:
                 widget: "list"
                 field: { label: "Feature", name: "feature", widget: "string" }
               - { label: "CTA Text", name: "ctaText", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false, hint: "Photo for this section. Recommended: 800x600px." }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
+              - { label: "Video URL (YouTube/Vimeo)", name: "videoUrl", widget: "string", required: false, hint: "YouTube or Vimeo URL." }
+              - { label: "Video File (MP4)", name: "videoFile", widget: "file", required: false, hint: "Self-hosted MP4 video." }
           - label: "CTA Banner"
             name: "ctaBanner"
             widget: "object"
@@ -278,6 +310,9 @@ collections:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Hero Background Image", name: "heroImage", widget: "image", required: false, hint: "Optional background photo. Recommended: 1920x1080px." }
+              - { label: "Hero Video URL (YouTube/Vimeo)", name: "heroVideoUrl", widget: "string", required: false, hint: "Paste a YouTube or Vimeo URL for background video." }
+              - { label: "Hero Video File (MP4)", name: "heroVideoFile", widget: "file", required: false, hint: "Upload an MP4 video for background video." }
           - label: "Section Header"
             name: "sectionHeader"
             widget: "object"
@@ -299,6 +334,10 @@ collections:
                 widget: "list"
                 field: { label: "Application", name: "application", widget: "string" }
               - { label: "CTA Text", name: "ctaText", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false, hint: "Photo for this section. Recommended: 800x600px." }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
+              - { label: "Video URL (YouTube/Vimeo)", name: "videoUrl", widget: "string", required: false, hint: "YouTube or Vimeo URL." }
+              - { label: "Video File (MP4)", name: "videoFile", widget: "file", required: false, hint: "Self-hosted MP4 video." }
           - label: "CTA Banner"
             name: "ctaBanner"
             widget: "object"
@@ -322,6 +361,9 @@ collections:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Hero Background Image", name: "heroImage", widget: "image", required: false, hint: "Optional background photo. Recommended: 1920x1080px." }
+              - { label: "Hero Video URL (YouTube/Vimeo)", name: "heroVideoUrl", widget: "string", required: false, hint: "Paste a YouTube or Vimeo URL for background video." }
+              - { label: "Hero Video File (MP4)", name: "heroVideoFile", widget: "file", required: false, hint: "Upload an MP4 video for background video." }
           - label: "Sidebar"
             name: "sidebar"
             widget: "object"
@@ -332,12 +374,24 @@ collections:
               - { label: "Tip 1 Description", name: "tip1Description", widget: "text" }
               - { label: "Tip 2 Title", name: "tip2Title", widget: "string" }
               - { label: "Tip 2 Description", name: "tip2Description", widget: "text" }
+              - { label: "Phone Icon Image", name: "phoneIcon", widget: "image", required: false }
+              - { label: "Email Icon Image", name: "emailIcon", widget: "image", required: false }
+              - { label: "Location Icon Image", name: "locationIcon", widget: "image", required: false }
+              - { label: "Hours Icon Image", name: "hoursIcon", widget: "image", required: false }
           - label: "Form Section"
             name: "form"
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+          - label: "Map Section"
+            name: "mapSection"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Google Maps Embed URL", name: "mapEmbedUrl", widget: "string", required: false, hint: "Paste the embed URL from Google Maps (go to Google Maps → Share → Embed a map → copy the src URL from the iframe code)" }
           - label: "FAQ Header"
             name: "faqHeader"
             widget: "object"

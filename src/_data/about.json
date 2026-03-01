@@ -1,10 +1,17 @@
 {
   "hero": {
+    "heroImage": "",
+    "heroVideoUrl": "",
+    "heroVideoFile": "",
     "label": "About Us",
     "title": "A Century of Turning Waste Into Worth",
     "description": "Since 1909, Fiber Conversion Inc. has been transforming textile byproducts into valuable industrial materials \u2014 building a legacy of sustainability long before it was a buzzword."
   },
   "heritage": {
+    "image": "",
+    "imageAlt": "",
+    "videoUrl": "",
+    "videoFile": "",
     "label": "Our Heritage",
     "title": "Rooted in New York. Built on Hard Work.",
     "paragraph1": "Fiber Conversion Inc. was founded in 1909 in the heart of New York's industrial corridor. In an era when textile waste was simply discarded, our founders saw an opportunity: transforming what others threw away into materials that manufacturers needed.",
@@ -20,10 +27,10 @@
     "title": "Our Mission & Values",
     "description": "We believe the textile industry can thrive without compromising the environment. Every decision we make is guided by these principles.",
     "items": [
-      { "title": "Environmental Stewardship", "description": "We divert textile waste from landfills and give fibers a second life, reducing the need for virgin materials and lowering the industry's carbon footprint." },
-      { "title": "Customer Partnership", "description": "At Fiber Conversion, the customer always comes first. We build lasting relationships through transparent communication and reliable service." },
-      { "title": "Consistent Quality", "description": "Our grading and processing standards ensure every batch of recycled fiber meets the specifications our customers depend on for their products." },
-      { "title": "Long-Term Thinking", "description": "We've operated for over a century because we make decisions for the long haul \u2014 investing in our people, our community, and our planet." }
+      { "title": "Environmental Stewardship", "description": "We divert textile waste from landfills and give fibers a second life, reducing the need for virgin materials and lowering the industry's carbon footprint.", "image": "" },
+      { "title": "Customer Partnership", "description": "At Fiber Conversion, the customer always comes first. We build lasting relationships through transparent communication and reliable service.", "image": "" },
+      { "title": "Consistent Quality", "description": "Our grading and processing standards ensure every batch of recycled fiber meets the specifications our customers depend on for their products.", "image": "" },
+      { "title": "Long-Term Thinking", "description": "We've operated for over a century because we make decisions for the long haul \u2014 investing in our people, our community, and our planet.", "image": "" }
     ]
   },
   "timelineHeader": {

@@ -1,5 +1,8 @@
 {
   "hero": {
+    "heroImage": "",
+    "heroVideoUrl": "",
+    "heroVideoFile": "",
     "label": "Our Services",
     "title": "End-to-End Textile Recycling Solutions",
     "description": "From collection and sorting to processing and delivery, we handle every step of the fiber recycling process so you don't have to."
@@ -12,15 +15,18 @@
   "overview": [
     {
       "title": "Fiber Processing",
-      "description": "Our core service. We take raw textile waste and transform it into clean, graded, ready-to-use fibers through mechanical processing. From opening and cleaning to blending and baling, we handle it all."
+      "description": "Our core service. We take raw textile waste and transform it into clean, graded, ready-to-use fibers through mechanical processing. From opening and cleaning to blending and baling, we handle it all.",
+      "image": ""
     },
     {
       "title": "Waste Collection & Logistics",
-      "description": "We coordinate the pickup, transportation, and receiving of textile waste from your facility. Scheduled or on-demand collection keeps your operation running smoothly."
+      "description": "We coordinate the pickup, transportation, and receiving of textile waste from your facility. Scheduled or on-demand collection keeps your operation running smoothly.",
+      "image": ""
     },
     {
       "title": "Custom Blending & Grading",
-      "description": "Need a specific fiber composition? We create custom blends and grades to your exact specifications, ensuring consistent quality for your manufacturing process."
+      "description": "Need a specific fiber composition? We create custom blends and grades to your exact specifications, ensuring consistent quality for your manufacturing process.",
+      "image": ""
     }
   ],
   "processHeader": {
@@ -53,6 +59,10 @@
   "details": [
     {
       "id": "fiber-processing",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Core Service",
       "title": "Fiber Processing",
       "description": "Our state-of-the-art processing facility handles a wide range of textile waste materials, transforming them into clean, graded fibers that are ready for reuse in manufacturing.",
@@ -67,6 +77,10 @@
     },
     {
       "id": "waste-collection",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Logistics",
       "title": "Waste Collection & Transportation",
       "description": "Getting your textile waste to us shouldn't be a headache. Our collection service handles the logistics so you can stay focused on your core business.",
@@ -81,6 +95,10 @@
     },
     {
       "id": "custom-blending",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Tailored Solutions",
       "title": "Custom Blending & Grading",
       "description": "Not all fibers are created equal, and neither are your requirements. We work with you to develop custom fiber products that meet your exact production specifications.",

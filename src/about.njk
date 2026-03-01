@@ -9,11 +9,13 @@ ogDescription: "Over a century of expertise transforming textile waste into valu
 activePage: about
 permalink: about.html
 ---
+{% from "media.njk" import media, icon %}
 
 {# ============================================
    PAGE HERO
    ============================================ #}
-<section class="page-hero">
+<section class="page-hero{% if about.hero.heroImage %} page-hero--has-image{% endif %}{% if about.hero.heroVideoUrl or about.hero.heroVideoFile %} page-hero--has-video{% endif %}"
+  {% if about.hero.heroImage %}style="--hero-bg-image: url('{{ about.hero.heroImage }}')"{% endif %}>
   <div class="container">
     <div class="page-hero__content">
       <span class="label">{{ about.hero.label }}</span>
@@ -26,6 +28,15 @@ permalink: about.html
       </nav>
     </div>
   </div>
+  {% if about.hero.heroVideoUrl %}
+    <div class="hero__video" data-video-url="{{ about.hero.heroVideoUrl | videoEmbed }}">
+      <noscript><iframe src="{{ about.hero.heroVideoUrl | videoEmbed }}" frameborder="0" allowfullscreen></iframe></noscript>
+    </div>
+  {% elif about.hero.heroVideoFile %}
+    <div class="hero__video">
+      <video src="{{ about.hero.heroVideoFile }}" autoplay muted loop playsinline></video>
+    </div>
+  {% endif %}
 </section>
 
 {# ============================================
@@ -41,10 +52,19 @@ permalink: about.html
         <p>{{ about.heritage.paragraph2 | safe }}</p>
         <p>{{ about.heritage.paragraph3 | safe }}</p>
       </div>
-      <div class="about-preview__visual fade-in-right">
-        <span class="big-number" data-count="{{ about.heritage.visualNumber }}" data-suffix="{{ about.heritage.visualSuffix }}">0</span>
-        <span class="big-label">{{ about.heritage.visualLabel }}</span>
-        <p>{{ about.heritage.visualDescription }}</p>
+      <div class="about-preview__visual fade-in-right{% if about.heritage.image or about.heritage.videoUrl or about.heritage.videoFile %} about-preview__visual--has-media{% endif %}">
+        {% if about.heritage.videoUrl or about.heritage.videoFile %}
+          <div class="about-preview__media">
+            {{ media(about.heritage.videoUrl, about.heritage.videoFile, null, null, null) }}
+          </div>
+        {% elif about.heritage.image %}
+          <img src="{{ about.heritage.image }}" alt="{{ about.heritage.imageAlt or 'Fiber Conversion heritage' }}" class="about-preview__media" loading="lazy">
+        {% endif %}
+        <div class="about-preview__overlay">
+          <span class="big-number" data-count="{{ about.heritage.visualNumber }}" data-suffix="{{ about.heritage.visualSuffix }}">0</span>
+          <span class="big-label">{{ about.heritage.visualLabel }}</span>
+          <p>{{ about.heritage.visualDescription }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -72,7 +92,7 @@ permalink: about.html
       {% for item in about.values.items %}
       <div class="value-item">
         <div class="value-item__icon">
-          {{ valueIcons[loop.index0] | safe }}
+          {{ icon(item.image, valueIcons[loop.index0]) }}
         </div>
         <h3>{{ item.title }}</h3>
         <p>{{ item.description }}</p>

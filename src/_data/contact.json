@@ -1,5 +1,8 @@
 {
   "hero": {
+    "heroImage": "",
+    "heroVideoUrl": "",
+    "heroVideoFile": "",
     "label": "Contact Us",
     "title": "Let's Start a Conversation",
     "description": "Whether you need a quote on recycled fibers, want to schedule waste collection, or just have questions \u2014 we're here to help."
@@ -7,6 +10,10 @@
   "sidebar": {
     "title": "Get in Touch",
     "description": "We'd love to hear from you. Reach out by phone, email, or use the form and we'll get back to you promptly.",
+    "phoneIcon": "",
+    "emailIcon": "",
+    "locationIcon": "",
+    "hoursIcon": "",
     "tip1Title": "Looking to sell textile waste?",
     "tip1Description": "Call us directly or use the form to describe your waste stream and we'll provide a pickup quote.",
     "tip2Title": "Need recycled fiber samples?",
@@ -15,6 +22,12 @@
   "form": {
     "title": "Send Us a Message",
     "description": "Fill out the form below and we'll respond within one business day."
+  },
+  "mapSection": {
+    "label": "Find Us",
+    "title": "Visit Our Facility",
+    "description": "We're located in Broadalbin, New York — in the heart of the Adirondack foothills. Stop by during business hours or schedule a visit.",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.5!2d-74.1935!3d43.0597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de7a1e1b8b1b1b%3A0x0!2s15+E+Elm+St%2C+Broadalbin%2C+NY+12025!5e0!3m2!1sen!2sus!4v1700000000000"
   },
   "faqHeader": {
     "label": "Common Questions",

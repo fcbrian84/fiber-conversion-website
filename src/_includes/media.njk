@@ -1,0 +1,47 @@
+{#
+  Reusable media macro: renders video, image, or fallback SVG.
+  Priority: videoUrl > videoFile > image > fallbackSvg
+
+  Parameters:
+    videoUrl    - YouTube or Vimeo URL (string, optional)
+    videoFile   - Path to self-hosted MP4 (string, optional)
+    image       - Path to image file (string, optional)
+    imageAlt    - Alt text for image (string, optional)
+    fallbackSvg - Raw SVG markup to render if no media (string, optional)
+    loading     - Loading attribute for img: "lazy" (default) or "eager"
+#}
+
+{% macro media(videoUrl, videoFile, image, imageAlt, fallbackSvg, loading) %}
+  {% if videoUrl %}
+    <div class="media-video" data-video-url="{{ videoUrl | videoEmbed }}">
+      <noscript>
+        <iframe src="{{ videoUrl | videoEmbed }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="{{ imageAlt or 'Video' }}"></iframe>
+      </noscript>
+    </div>
+  {% elif videoFile %}
+    <div class="media-video">
+      <video src="{{ videoFile }}" autoplay muted loop playsinline></video>
+    </div>
+  {% elif image %}
+    <img src="{{ image }}" alt="{{ imageAlt or '' }}" loading="{{ loading or 'lazy' }}">
+  {% elif fallbackSvg %}
+    {{ fallbackSvg | safe }}
+  {% endif %}
+{% endmacro %}
+
+{#
+  Icon media macro: for small icon containers (48-64px).
+  Only supports image replacement, not video.
+
+  Parameters:
+    image       - Path to custom icon/image (string, optional)
+    fallbackSvg - Raw SVG markup for default icon (string, optional)
+#}
+
+{% macro icon(image, fallbackSvg) %}
+  {% if image %}
+    <img src="{{ image }}" alt="" loading="lazy">
+  {% elif fallbackSvg %}
+    {{ fallbackSvg | safe }}
+  {% endif %}
+{% endmacro %}

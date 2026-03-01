@@ -9,11 +9,13 @@ ogDescription: "Supplying quality recycled fibers to automotive, furniture, insu
 activePage: industries
 permalink: industries.html
 ---
+{% from "media.njk" import media, icon %}
 
 {# ============================================
    PAGE HERO
    ============================================ #}
-<section class="page-hero">
+<section class="page-hero{% if industries.hero.heroImage %} page-hero--has-image{% endif %}{% if industries.hero.heroVideoUrl or industries.hero.heroVideoFile %} page-hero--has-video{% endif %}"
+  {% if industries.hero.heroImage %}style="--hero-bg-image: url('{{ industries.hero.heroImage }}')"{% endif %}>
   <div class="container">
     <div class="page-hero__content">
       <span class="label">{{ industries.hero.label }}</span>
@@ -26,6 +28,15 @@ permalink: industries.html
       </nav>
     </div>
   </div>
+  {% if industries.hero.heroVideoUrl %}
+    <div class="hero__video" data-video-url="{{ industries.hero.heroVideoUrl | videoEmbed }}">
+      <noscript><iframe src="{{ industries.hero.heroVideoUrl | videoEmbed }}" frameborder="0" allowfullscreen></iframe></noscript>
+    </div>
+  {% elif industries.hero.heroVideoFile %}
+    <div class="hero__video">
+      <video src="{{ industries.hero.heroVideoFile }}" autoplay muted loop playsinline></video>
+    </div>
+  {% endif %}
 </section>
 
 {# ============================================
@@ -70,9 +81,9 @@ permalink: industries.html
         </ul>
         <a href="contact.html" class="btn btn--outline">{{ item.ctaText }}</a>
       </div>
-      <div class="service-detail__visual">
-        {{ industrySvgs[loop.index0] | safe }}
-      </div>
+          <div class="service-detail__visual{% if item.image or item.videoUrl or item.videoFile %} service-detail__visual--has-media{% endif %}">
+            {{ media(item.videoUrl, item.videoFile, item.image, item.imageAlt, industrySvgs[loop.index0]) }}
+          </div>
     </div>
   </div>
 </section>

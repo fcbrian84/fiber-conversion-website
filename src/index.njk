@@ -10,11 +10,13 @@ ogUrl: "https://fiberconversion.net/"
 activePage: home
 permalink: index.html
 ---
+{% from "media.njk" import media, icon %}
 
 {# ========================================
    HERO SECTION
    ======================================== #}
-<section class="hero">
+<section class="hero{% if homepage.hero.heroImage %} hero--has-image{% endif %}{% if homepage.hero.heroVideoUrl or homepage.hero.heroVideoFile %} hero--has-video{% endif %}"
+  {% if homepage.hero.heroImage %}style="--hero-bg-image: url('{{ homepage.hero.heroImage }}')"{% endif %}>
   <div class="container">
     <div class="hero__content fade-in">
       <span class="hero__label">{{ homepage.hero.label }}</span>
@@ -45,6 +47,15 @@ permalink: index.html
       <circle cx="300" cy="300" r="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
     </svg>
   </div>
+  {% if homepage.hero.heroVideoUrl %}
+    <div class="hero__video" data-video-url="{{ homepage.hero.heroVideoUrl | videoEmbed }}">
+      <noscript><iframe src="{{ homepage.hero.heroVideoUrl | videoEmbed }}" frameborder="0" allowfullscreen></iframe></noscript>
+    </div>
+  {% elif homepage.hero.heroVideoFile %}
+    <div class="hero__video">
+      <video src="{{ homepage.hero.heroVideoFile }}" autoplay muted loop playsinline></video>
+    </div>
+  {% endif %}
 </section>
 
 {# ========================================
@@ -68,7 +79,7 @@ permalink: index.html
       {% for card in homepage.servicesSection.cards %}
         <div class="card fade-in">
           <div class="card__icon">
-            {{ serviceIcons[loop.index0] | safe }}
+            {{ icon(card.image, serviceIcons[loop.index0]) }}
           </div>
           <h3>{{ card.title }}</h3>
           <p>{{ card.description }}</p>
@@ -95,10 +106,19 @@ permalink: index.html
         <p>{{ homepage.aboutPreview.paragraph2 | safe }}</p>
         <a href="about.html" class="btn btn--primary">{{ homepage.aboutPreview.buttonText }}</a>
       </div>
-      <div class="about-preview__visual fade-in-right">
-        <div class="big-number">{{ homepage.aboutPreview.visualNumber }}</div>
-        <div class="big-label">{{ homepage.aboutPreview.visualLabel }}</div>
-        <p class="about-preview__description">{{ homepage.aboutPreview.visualDescription }}</p>
+      <div class="about-preview__visual fade-in-right{% if homepage.aboutPreview.image or homepage.aboutPreview.videoUrl or homepage.aboutPreview.videoFile %} about-preview__visual--has-media{% endif %}">
+        {% if homepage.aboutPreview.videoUrl or homepage.aboutPreview.videoFile %}
+          <div class="about-preview__media">
+            {{ media(homepage.aboutPreview.videoUrl, homepage.aboutPreview.videoFile, null, null, null) }}
+          </div>
+        {% elif homepage.aboutPreview.image %}
+          <img src="{{ homepage.aboutPreview.image }}" alt="{{ homepage.aboutPreview.imageAlt or 'Fiber Conversion facility' }}" class="about-preview__media" loading="lazy">
+        {% endif %}
+        <div class="about-preview__overlay">
+          <div class="big-number">{{ homepage.aboutPreview.visualNumber }}</div>
+          <div class="big-label">{{ homepage.aboutPreview.visualLabel }}</div>
+          <p class="about-preview__description">{{ homepage.aboutPreview.visualDescription }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -126,7 +146,7 @@ permalink: index.html
       {% for value in homepage.whyChooseUs.values %}
         <div class="value-item fade-in">
           <div class="value-item__icon">
-            {{ valueIcons[loop.index0] | safe }}
+            {{ icon(value.image, valueIcons[loop.index0]) }}
           </div>
           <h4>{{ value.title }}</h4>
           <p>{{ value.description }}</p>
@@ -160,7 +180,7 @@ permalink: index.html
       {% for item in homepage.industriesSection.items %}
         <a href="industries.html" class="industry-item fade-in">
           <div class="industry-item__icon">
-            {{ industryIcons[loop.index0] | safe }}
+            {{ icon(item.image, industryIcons[loop.index0]) }}
           </div>
           <div class="industry-item__text">
             <h4>{{ item.title }}</h4>
@@ -186,7 +206,7 @@ permalink: index.html
     <div class="dual-cta stagger-children">
       <div class="dual-cta__card dual-cta__card--sell fade-in">
         <div class="dual-cta__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+          {{ icon(homepage.dualCta.sellCard.image, '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>') }}
         </div>
         <h3>{{ homepage.dualCta.sellCard.title }}</h3>
         <p>{{ homepage.dualCta.sellCard.description }}</p>
@@ -194,7 +214,7 @@ permalink: index.html
       </div>
       <div class="dual-cta__card dual-cta__card--buy fade-in">
         <div class="dual-cta__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          {{ icon(homepage.dualCta.buyCard.image, '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>') }}
         </div>
         <h3>{{ homepage.dualCta.buyCard.title }}</h3>
         <p>{{ homepage.dualCta.buyCard.description }}</p>

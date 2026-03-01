@@ -9,11 +9,13 @@ ogDescription: "End-to-end textile recycling services: fiber processing, waste c
 activePage: services
 permalink: services.html
 ---
+{% from "media.njk" import media, icon %}
 
 {# ============================================
    PAGE HERO
    ============================================ #}
-<section class="page-hero">
+<section class="page-hero{% if services.hero.heroImage %} page-hero--has-image{% endif %}{% if services.hero.heroVideoUrl or services.hero.heroVideoFile %} page-hero--has-video{% endif %}"
+  {% if services.hero.heroImage %}style="--hero-bg-image: url('{{ services.hero.heroImage }}')"{% endif %}>
   <div class="container">
     <div class="page-hero__content">
       <span class="label">{{ services.hero.label }}</span>
@@ -26,6 +28,15 @@ permalink: services.html
       </nav>
     </div>
   </div>
+  {% if services.hero.heroVideoUrl %}
+    <div class="hero__video" data-video-url="{{ services.hero.heroVideoUrl | videoEmbed }}">
+      <noscript><iframe src="{{ services.hero.heroVideoUrl | videoEmbed }}" frameborder="0" allowfullscreen></iframe></noscript>
+    </div>
+  {% elif services.hero.heroVideoFile %}
+    <div class="hero__video">
+      <video src="{{ services.hero.heroVideoFile }}" autoplay muted loop playsinline></video>
+    </div>
+  {% endif %}
 </section>
 
 {# ============================================
@@ -51,7 +62,7 @@ permalink: services.html
       {% for card in services.overview %}
         <div class="card fade-in">
           <div class="card__icon">
-            {{ cardIcons[loop.index0] | safe }}
+            {{ icon(card.image, cardIcons[loop.index0]) }}
           </div>
           <h3>{{ card.title }}</h3>
           <p>{{ card.description }}</p>
@@ -118,9 +129,9 @@ permalink: services.html
         </ul>
         <a href="contact.html" class="btn btn--primary">{{ detail.ctaText }}</a>
       </div>
-      <div class="service-detail__visual">
-        {{ detailSvgs[loop.index0] | safe }}
-      </div>
+          <div class="service-detail__visual{% if detail.image or detail.videoUrl or detail.videoFile %} service-detail__visual--has-media{% endif %}">
+            {{ media(detail.videoUrl, detail.videoFile, detail.image, detail.imageAlt, detailSvgs[loop.index0]) }}
+          </div>
     </div>
   </div>
 </section>

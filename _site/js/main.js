@@ -154,4 +154,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Lazy Video Loading ──────────────────────────────────────
+  // Load YouTube/Vimeo iframes only when they scroll into view
+  const videoContainers = document.querySelectorAll('[data-video-url]');
+  if (videoContainers.length > 0 && 'IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const container = entry.target;
+          const url = container.dataset.videoUrl;
+          if (url && !container.querySelector('iframe')) {
+            const iframe = document.createElement('iframe');
+            iframe.src = url;
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.loading = 'lazy';
+            iframe.title = 'Video';
+            // Clear noscript fallback
+            container.innerHTML = '';
+            container.appendChild(iframe);
+          }
+          videoObserver.unobserve(container);
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    videoContainers.forEach(container => videoObserver.observe(container));
+  }
+
 });

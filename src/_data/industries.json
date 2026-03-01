@@ -1,5 +1,8 @@
 {
   "hero": {
+    "heroImage": "",
+    "heroVideoUrl": "",
+    "heroVideoFile": "",
     "label": "Industries",
     "title": "Recycled Fibers for Every Industry",
     "description": "Our processed fibers serve manufacturers across a wide range of sectors, providing sustainable, cost-effective alternatives to virgin materials."
@@ -12,6 +15,10 @@
   "items": [
     {
       "id": "automotive",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Automotive",
       "title": "Automotive Manufacturing",
       "shortDescription": "Sound insulation, trunk liners & padding",
@@ -27,6 +34,10 @@
     },
     {
       "id": "building",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Construction",
       "title": "Building & Insulation",
       "shortDescription": "Thermal & acoustic insulation products",
@@ -42,6 +53,10 @@
     },
     {
       "id": "furniture",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Home Goods",
       "title": "Furniture & Bedding",
       "shortDescription": "Padding, stuffing & cushion materials",
@@ -57,6 +72,10 @@
     },
     {
       "id": "nonwovens",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Technical Textiles",
       "title": "Nonwovens & Geotextiles",
       "shortDescription": "Geotextiles, filtration & industrial fabrics",
@@ -72,6 +91,10 @@
     },
     {
       "id": "paper",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "Pulp & Paper",
       "title": "Paper & Specialty Products",
       "shortDescription": "Fiber feedstock for specialty paper products",
@@ -87,6 +110,10 @@
     },
     {
       "id": "industrial",
+      "image": "",
+      "imageAlt": "",
+      "videoUrl": "",
+      "videoFile": "",
       "label": "General Industrial",
       "title": "Industrial & Commercial Applications",
       "shortDescription": "Wiping cloths, absorbents & more",
