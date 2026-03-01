@@ -1,6 +1,10 @@
 # Ignore Claude local folder
 .claude/
 
+
+# Node Modules
+node_modules/
+
 # macOS
 .DS_Store
 .AppleDouble
