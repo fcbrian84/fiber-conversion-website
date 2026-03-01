@@ -1,0 +1,12 @@
+{
+  "name": "fiber-conversion-website",
+  "version": "1.0.0",
+  "description": "Fiber Conversion Inc. - Textile Recycling & Fiber Processing Since 1909",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

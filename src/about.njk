@@ -1,0 +1,144 @@
+---
+layout: base.njk
+title: "About Us | Fiber Conversion Inc. - Over a Century of Textile Recycling"
+description: "Learn about Fiber Conversion Inc.'s 115+ year history of recycling textile byproducts in New York. Our mission, values, and commitment to sustainable fiber processing."
+keywords: "about Fiber Conversion, textile recycling history, sustainable fiber company, New York recycling, fiber processing company"
+canonical: "https://fiberconversion.net/about.html"
+ogTitle: "About Fiber Conversion Inc. | Our Story Since 1909"
+ogDescription: "Over a century of expertise transforming textile waste into valuable industrial fibers."
+activePage: about
+permalink: about.html
+---
+
+{# ============================================
+   PAGE HERO
+   ============================================ #}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="label">{{ about.hero.label }}</span>
+      <h1>{{ about.hero.title }}</h1>
+      <p>{{ about.hero.description | safe }}</p>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>About Us</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   OUR STORY
+   ============================================ #}
+<section class="section">
+  <div class="container">
+    <div class="about-preview">
+      <div class="about-preview__content fade-in-left">
+        <span class="label">{{ about.heritage.label }}</span>
+        <h2>{{ about.heritage.title }}</h2>
+        <p>{{ about.heritage.paragraph1 | safe }}</p>
+        <p>{{ about.heritage.paragraph2 | safe }}</p>
+        <p>{{ about.heritage.paragraph3 | safe }}</p>
+      </div>
+      <div class="about-preview__visual fade-in-right">
+        <span class="big-number" data-count="{{ about.heritage.visualNumber }}" data-suffix="{{ about.heritage.visualSuffix }}">0</span>
+        <span class="big-label">{{ about.heritage.visualLabel }}</span>
+        <p>{{ about.heritage.visualDescription }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   MISSION & VALUES
+   ============================================ #}
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="label">{{ about.values.label }}</span>
+      <h2>{{ about.values.title | safe }}</h2>
+      <p>{{ about.values.description }}</p>
+    </div>
+
+    {% set valueIcons = [
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
+    ] %}
+
+    <div class="values-grid stagger-children">
+      {% for item in about.values.items %}
+      <div class="value-item">
+        <div class="value-item__icon">
+          {{ valueIcons[loop.index0] | safe }}
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   TIMELINE
+   ============================================ #}
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="label">{{ about.timelineHeader.label }}</span>
+      <h2>{{ about.timelineHeader.title }}</h2>
+      <p>{{ about.timelineHeader.description }}</p>
+    </div>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="timeline fade-in">
+        {% for item in timeline.items %}
+        <div class="timeline__item">
+          <span class="timeline__year">{{ item.year }}</span>
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   STATS
+   ============================================ #}
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="label">{{ about.stats.label }}</span>
+      <h2>{{ about.stats.title }}</h2>
+    </div>
+    <div class="stat-row stagger-children">
+      {% for item in about.stats.items %}
+      <div class="stat-item">
+        {% if item.dataCount %}
+        <span class="stat-item__number" data-count="{{ item.dataCount }}" data-suffix="{{ item.dataSuffix }}">0</span>
+        {% else %}
+        <span class="stat-item__number">{{ item.number }}</span>
+        {% endif %}
+        <span class="stat-item__label">{{ item.label | safe }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   CTA BANNER
+   ============================================ #}
+<section class="section">
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <h2>{{ about.ctaBanner.title }}</h2>
+      <p>{{ about.ctaBanner.description }}</p>
+      <a href="contact.html" class="btn btn--secondary btn--large">{{ about.ctaBanner.buttonText }}</a>
+    </div>
+  </div>
+</section>

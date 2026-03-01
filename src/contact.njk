@@ -1,0 +1,177 @@
+---
+layout: base.njk
+title: "Contact Us | Fiber Conversion Inc. - Get a Quote for Recycled Fibers"
+description: "Contact Fiber Conversion Inc. for textile recycling services, recycled fiber quotes, or waste collection scheduling. Call (518) 883-3431 or email us today."
+keywords: "contact Fiber Conversion, recycled fiber quote, textile recycling New York, fiber processing inquiry, waste collection scheduling"
+canonical: "https://fiberconversion.net/contact.html"
+ogTitle: "Contact Fiber Conversion Inc. | Get a Quote"
+ogDescription: "Reach out for textile recycling services, fiber quotes, or to schedule waste collection. Located in New York."
+activePage: contact
+permalink: contact.html
+---
+
+{# ============================================
+   PAGE HERO
+   ============================================ #}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="label">{{ contact.hero.label }}</span>
+      <h1>{{ contact.hero.title }}</h1>
+      <p>{{ contact.hero.description | safe }}</p>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Contact</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   CONTACT SECTION
+   ============================================ #}
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      {# ---------- Left Column: Contact Info ---------- #}
+      <div class="contact-info fade-in-left">
+        <div>
+          <h2 style="margin-bottom: 0.5rem;">{{ contact.sidebar.title }}</h2>
+          <p style="color: var(--color-gray-600); margin-bottom: 2rem;">{{ contact.sidebar.description }}</p>
+        </div>
+
+        <div class="contact-info__item">
+          <div class="contact-info__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="{{ site.phoneLink }}">{{ site.phone }}</a></p>
+          </div>
+        </div>
+
+        <div class="contact-info__item">
+          <div class="contact-info__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+        </div>
+
+        <div class="contact-info__item">
+          <div class="contact-info__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <p>{{ site.location }}</p>
+          </div>
+        </div>
+
+        <div class="contact-info__item">
+          <div class="contact-info__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4>Business Hours</h4>
+            <p>{{ site.businessHours }}</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem; padding: 1.5rem; background: var(--color-gray-100); border-radius: var(--radius-lg);">
+          <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">{{ contact.sidebar.tip1Title }}</h4>
+          <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-bottom: 0;">{{ contact.sidebar.tip1Description }}</p>
+        </div>
+
+        <div style="padding: 1.5rem; background: var(--color-gray-100); border-radius: var(--radius-lg);">
+          <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">{{ contact.sidebar.tip2Title }}</h4>
+          <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-bottom: 0;">{{ contact.sidebar.tip2Description }}</p>
+        </div>
+      </div>
+
+      {# ---------- Right Column: Contact Form ---------- #}
+      <div class="contact-form fade-in-right">
+        <h3>{{ contact.form.title }}</h3>
+        <p>{{ contact.form.description }}</p>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+
+          <div class="form-group">
+            <label for="interest">I'm Interested In *</label>
+            <select id="interest" name="interest" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="selling-waste">Selling Textile Waste</option>
+              <option value="buying-fiber">Buying Recycled Fibers</option>
+              <option value="waste-collection">Waste Collection Services</option>
+              <option value="custom-blending">Custom Blending &amp; Grading</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large" style="width: 100%; justify-content: center;">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   FAQ SECTION
+   ============================================ #}
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="label">{{ contact.faqHeader.label }}</span>
+      <h2>{{ contact.faqHeader.title }}</h2>
+      <p>{{ contact.faqHeader.description }}</p>
+    </div>
+
+    <div class="card-grid" style="max-width: 800px; margin: 0 auto;">
+      {% for item in faq.items %}
+      <div class="card fade-in">
+        <h3>{{ item.question }}</h3>
+        <p>{{ item.answer }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

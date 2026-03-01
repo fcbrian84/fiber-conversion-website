@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "label": "Contact Us",
+    "title": "Let's Start a Conversation",
+    "description": "Whether you need a quote on recycled fibers, want to schedule waste collection, or just have questions \u2014 we're here to help."
+  },
+  "sidebar": {
+    "title": "Get in Touch",
+    "description": "We'd love to hear from you. Reach out by phone, email, or use the form and we'll get back to you promptly.",
+    "tip1Title": "Looking to sell textile waste?",
+    "tip1Description": "Call us directly or use the form to describe your waste stream and we'll provide a pickup quote.",
+    "tip2Title": "Need recycled fiber samples?",
+    "tip2Description": "Tell us about your application and we'll send you samples of our available fiber grades."
+  },
+  "form": {
+    "title": "Send Us a Message",
+    "description": "Fill out the form below and we'll respond within one business day."
+  },
+  "faqHeader": {
+    "label": "Common Questions",
+    "title": "Frequently Asked Questions",
+    "description": "Quick answers to the questions we hear most often."
+  }
+}

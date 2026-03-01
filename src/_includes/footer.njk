@@ -1,0 +1,61 @@
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo">
+            <svg class="header__logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#1a5632"/>
+              <path d="M12 14h8v2h-8zM12 19h12v2h-12zM12 24h10v2h-10zM26 14c0 0 4 3 4 8s-4 8-4 8" stroke="#c89b3c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M30 16c0 0 3 2.5 3 6s-3 6-3 6" stroke="#c89b3c" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+            </svg>
+            <div class="header__logo-text">
+              <span class="company-name">{{ site.name }}</span>
+              <span class="tagline">{{ site.tagline }}</span>
+            </div>
+          </a>
+          <p>{{ site.footerDescription }}</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer__links">
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="industries.html">Industries</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <div class="footer__links">
+            <a href="services.html#fiber-processing">Fiber Processing</a>
+            <a href="services.html#waste-collection">Waste Collection</a>
+            <a href="services.html#custom-blending">Custom Blending</a>
+            <a href="services.html">Material Grading</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Contact Us</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <p><a href="{{ site.phoneLink }}">{{ site.phone }}</a></p>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>{{ site.location }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 {{ site.fullName }} All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>

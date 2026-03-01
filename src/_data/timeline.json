@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "year": "1909",
+      "title": "Founded in New York",
+      "description": "Fiber Conversion Inc. opens its doors as a small textile reclamation operation, serving local garment manufacturers and mills."
+    },
+    {
+      "year": "1940s",
+      "title": "Wartime Contribution",
+      "description": "During World War II, the company plays a vital role in fiber recovery efforts, recycling materials to support the war-time economy and reduce waste during resource scarcity."
+    },
+    {
+      "year": "1960s",
+      "title": "Expanded Operations",
+      "description": "Growing demand for recycled fibers leads to expanded processing capacity and new partnerships with manufacturers throughout the Northeast."
+    },
+    {
+      "year": "1980s",
+      "title": "Modernized Processing",
+      "description": "Investment in modern fiber processing equipment allows us to handle a broader range of textile waste and produce higher-quality recycled fibers."
+    },
+    {
+      "year": "2000s",
+      "title": "Sustainability Leadership",
+      "description": "As environmental awareness grows, Fiber Conversion becomes a recognized leader in closed-loop textile recycling, partnering with companies committed to reducing their environmental impact."
+    },
+    {
+      "year": "Today",
+      "title": "Continuing the Legacy",
+      "description": "With over 115 years of operation, we continue to innovate our processes while staying true to the principles that have guided us since day one: quality, service, and sustainability."
+    }
+  ]
+}

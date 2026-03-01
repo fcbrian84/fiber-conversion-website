@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "label": "Industries",
+    "title": "Recycled Fibers for Every Industry",
+    "description": "Our processed fibers serve manufacturers across a wide range of sectors, providing sustainable, cost-effective alternatives to virgin materials."
+  },
+  "sectionHeader": {
+    "label": "Markets We Serve",
+    "title": "Trusted Across Sectors",
+    "description": "From the cars you drive to the buildings you work in, recycled fibers from Fiber Conversion are already part of everyday life."
+  },
+  "items": [
+    {
+      "id": "automotive",
+      "label": "Automotive",
+      "title": "Automotive Manufacturing",
+      "shortDescription": "Sound insulation, trunk liners & padding",
+      "description": "The automotive industry is one of the largest consumers of recycled textile fibers. Our processed fibers are used in a wide range of vehicle components, helping manufacturers meet both cost and sustainability targets.",
+      "applications": [
+        "Sound insulation and acoustic barriers",
+        "Trunk liners and floor coverings",
+        "Seat padding and cushioning materials",
+        "Door panel insulation",
+        "Headliners and interior trim components"
+      ],
+      "ctaText": "Request Automotive Fiber Samples"
+    },
+    {
+      "id": "building",
+      "label": "Construction",
+      "title": "Building & Insulation",
+      "shortDescription": "Thermal & acoustic insulation products",
+      "description": "Recycled textile fibers are increasingly used in building insulation products, offering excellent thermal and acoustic properties while diverting waste from landfills. Our fibers help create greener buildings.",
+      "applications": [
+        "Thermal insulation batts and rolls",
+        "Acoustic wall and ceiling panels",
+        "Underlayment for flooring systems",
+        "Green building and LEED-eligible materials",
+        "Blown-in insulation fiber feedstock"
+      ],
+      "ctaText": "Discuss Insulation Fiber Needs"
+    },
+    {
+      "id": "furniture",
+      "label": "Home Goods",
+      "title": "Furniture & Bedding",
+      "shortDescription": "Padding, stuffing & cushion materials",
+      "description": "From mattress padding to sofa cushions, recycled fibers provide the comfort and resilience that furniture and bedding manufacturers need, at a fraction of the cost and environmental impact of virgin materials.",
+      "applications": [
+        "Mattress padding and quilting fibers",
+        "Sofa and cushion stuffing materials",
+        "Pillow fill and decorative cushion fibers",
+        "Upholstery padding and interlining",
+        "Pet bed and accessory filling"
+      ],
+      "ctaText": "Explore Furniture Fibers"
+    },
+    {
+      "id": "nonwovens",
+      "label": "Technical Textiles",
+      "title": "Nonwovens & Geotextiles",
+      "shortDescription": "Geotextiles, filtration & industrial fabrics",
+      "description": "The nonwovens industry relies on consistent, quality fiber inputs. We supply processed fibers for a range of technical textile applications where performance and reliability are critical.",
+      "applications": [
+        "Geotextile fabrics for erosion control and soil stabilization",
+        "Filtration media for air and liquid applications",
+        "Industrial wipes and absorbent materials",
+        "Roofing and waterproofing membranes",
+        "Agricultural landscape fabrics"
+      ],
+      "ctaText": "Inquire About Nonwoven Fibers"
+    },
+    {
+      "id": "paper",
+      "label": "Pulp & Paper",
+      "title": "Paper & Specialty Products",
+      "shortDescription": "Fiber feedstock for specialty paper products",
+      "description": "Cotton and other natural fiber waste can be recycled into feedstock for specialty paper products. We supply clean, processed fiber for paper mills and specialty product manufacturers.",
+      "applications": [
+        "Cotton linter fiber for specialty papers",
+        "Currency and security paper feedstock",
+        "Fine stationery and art paper fibers",
+        "Medical and hygiene product fibers",
+        "Cellulose-based industrial products"
+      ],
+      "ctaText": "Request Paper Fiber Info"
+    },
+    {
+      "id": "industrial",
+      "label": "General Industrial",
+      "title": "Industrial & Commercial Applications",
+      "shortDescription": "Wiping cloths, absorbents & more",
+      "description": "Beyond specific sectors, recycled fibers find use in dozens of industrial and commercial applications. If your process uses fiber, chances are we can supply a recycled alternative.",
+      "applications": [
+        "Industrial wiping cloths and rags",
+        "Oil and chemical absorbent materials",
+        "Packing and cushioning materials",
+        "Erosion control blankets and socks",
+        "Composite material reinforcement fibers"
+      ],
+      "ctaText": "Explore Industrial Solutions"
+    }
+  ],
+  "ctaBanner": {
+    "title": "Don't See Your Industry?",
+    "description": "We work with manufacturers across many sectors. If you use fibers in your process, we can likely help. Let's talk.",
+    "buttonText": "Contact Us"
+  }
+}

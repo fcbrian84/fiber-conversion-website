@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "question": "What types of textile waste do you accept?",
+      "answer": "We accept a wide range of textile byproducts including cotton, polyester, nylon, blends, cutting scraps, mill ends, and post-industrial textile waste. Contact us with details about your waste stream and we'll let you know how we can help."
+    },
+    {
+      "question": "What areas do you service for collection?",
+      "answer": "We primarily serve manufacturers in the Northeast United States, with our base of operations in New York. For larger volumes, we can arrange collection and transportation from a wider geographic area."
+    },
+    {
+      "question": "Can you provide samples before I order?",
+      "answer": "Absolutely. We encourage potential customers to request samples of our processed fibers. This ensures our products meet your specifications before you commit to a purchase."
+    },
+    {
+      "question": "What is the minimum order quantity?",
+      "answer": "Minimum quantities vary by fiber type and grade. Contact us with your requirements and we'll work with you to find a solution that fits your needs, whether you're looking for a trial quantity or ongoing supply."
+    }
+  ]
+}

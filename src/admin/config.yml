@@ -1,0 +1,378 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  # ── Site Settings ──────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Global Settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Company Name", name: "name", widget: "string" }
+          - { label: "Full Company Name", name: "fullName", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Phone Number (Display)", name: "phone", widget: "string" }
+          - { label: "Phone Number (Link)", name: "phoneLink", widget: "string", hint: "Format: tel:XXX-XXX-XXXX" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Business Hours", name: "businessHours", widget: "string" }
+          - { label: "Footer Description", name: "footerDescription", widget: "text" }
+          - { label: "Website URL", name: "url", widget: "string" }
+
+  # ── Homepage ───────────────────────────────────────────────────
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "src/_data/homepage.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title Highlight", name: "titleHighlight", widget: "string", hint: "The highlighted word(s) in the title" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
+              - { label: "Secondary Button Text", name: "secondaryButtonText", widget: "string" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Counter Target (optional)", name: "dataCount", widget: "string", required: false }
+                  - { label: "Counter Suffix (optional)", name: "dataSuffix", widget: "string", required: false }
+          - label: "Services Section"
+            name: "servicesSection"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Service Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "About Preview"
+            name: "aboutPreview"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Visual Number", name: "visualNumber", widget: "string" }
+              - { label: "Visual Label", name: "visualLabel", widget: "string" }
+              - { label: "Visual Description", name: "visualDescription", widget: "string" }
+          - label: "Why Choose Us"
+            name: "whyChooseUs"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Values"
+                name: "values"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "Industries Section"
+            name: "industriesSection"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Industry Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string" }
+          - label: "Dual CTA"
+            name: "dualCta"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Sell Card"
+                name: "sellCard"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Button Text", name: "buttonText", widget: "string" }
+              - label: "Buy Card"
+                name: "buyCard"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Button Text", name: "buttonText", widget: "string" }
+          - label: "CTA Banner"
+            name: "ctaBanner"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+
+  # ── About Page ─────────────────────────────────────────────────
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "src/_data/about.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Heritage Section"
+            name: "heritage"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+              - { label: "Paragraph 3", name: "paragraph3", widget: "text" }
+              - { label: "Visual Number", name: "visualNumber", widget: "string" }
+              - { label: "Visual Suffix", name: "visualSuffix", widget: "string" }
+              - { label: "Visual Label", name: "visualLabel", widget: "string" }
+              - { label: "Visual Description", name: "visualDescription", widget: "string" }
+          - label: "Values Section"
+            name: "values"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Value Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "Timeline Header"
+            name: "timelineHeader"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Stats Section"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Stat Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Display Value", name: "number", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Counter Target (optional)", name: "dataCount", widget: "string", required: false }
+                  - { label: "Counter Suffix (optional)", name: "dataSuffix", widget: "string", required: false }
+          - label: "CTA Banner"
+            name: "ctaBanner"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+
+  # ── Services Page ──────────────────────────────────────────────
+  - name: "services"
+    label: "Services Page"
+    files:
+      - name: "services"
+        label: "Services Page Content"
+        file: "src/_data/services.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Overview Header"
+            name: "overviewHeader"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Overview Cards"
+            name: "overview"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Process Header"
+            name: "processHeader"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Process Steps"
+            name: "process"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Service Details"
+            name: "details"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - label: "CTA Banner"
+            name: "ctaBanner"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+
+  # ── Industries Page ────────────────────────────────────────────
+  - name: "industries"
+    label: "Industries Page"
+    files:
+      - name: "industries"
+        label: "Industries Page Content"
+        file: "src/_data/industries.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Section Header"
+            name: "sectionHeader"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Industry Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Tab Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short Description", name: "shortDescription", widget: "string" }
+              - { label: "Full Description", name: "description", widget: "text" }
+              - label: "Applications"
+                name: "applications"
+                widget: "list"
+                field: { label: "Application", name: "application", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - label: "CTA Banner"
+            name: "ctaBanner"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+
+  # ── Contact Page ───────────────────────────────────────────────
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - name: "contact"
+        label: "Contact Page Content"
+        file: "src/_data/contact.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Sidebar"
+            name: "sidebar"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tip 1 Title", name: "tip1Title", widget: "string" }
+              - { label: "Tip 1 Description", name: "tip1Description", widget: "text" }
+              - { label: "Tip 2 Title", name: "tip2Title", widget: "string" }
+              - { label: "Tip 2 Description", name: "tip2Description", widget: "text" }
+          - label: "Form Section"
+            name: "form"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "FAQ Header"
+            name: "faqHeader"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # ── Timeline ───────────────────────────────────────────────────
+  - name: "timeline"
+    label: "Timeline"
+    files:
+      - name: "timeline"
+        label: "Timeline Milestones"
+        file: "src/_data/timeline.json"
+        fields:
+          - label: "Milestones"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # ── FAQ ─────────────────────────────────────────────────────────
+  - name: "faq"
+    label: "FAQ"
+    files:
+      - name: "faq"
+        label: "Frequently Asked Questions"
+        file: "src/_data/faq.json"
+        fields:
+          - label: "Questions"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }

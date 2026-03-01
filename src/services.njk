@@ -1,0 +1,140 @@
+---
+layout: base.njk
+title: "Our Services | Fiber Conversion Inc. - Textile Recycling & Fiber Processing"
+description: "Fiber Conversion offers comprehensive textile recycling services including fiber processing, waste collection, custom blending, material grading, and closed-loop recycling solutions."
+keywords: "fiber processing services, textile waste collection, custom fiber blending, material grading, closed-loop recycling, textile recycling services"
+canonical: "https://fiberconversion.net/services.html"
+ogTitle: "Services | Fiber Conversion Inc."
+ogDescription: "End-to-end textile recycling services: fiber processing, waste collection, custom blending, and more."
+activePage: services
+permalink: services.html
+---
+
+{# ============================================
+   PAGE HERO
+   ============================================ #}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="label">{{ services.hero.label }}</span>
+      <h1>{{ services.hero.title }}</h1>
+      <p>{{ services.hero.description | safe }}</p>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Services</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   SERVICE OVERVIEW CARDS
+   ============================================ #}
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="label">{{ services.overviewHeader.label }}</span>
+      <h2>{{ services.overviewHeader.title }}</h2>
+      <p>{{ services.overviewHeader.description }}</p>
+    </div>
+
+    {% set cardIcons = [
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>'
+    ] %}
+
+    {% set cardAnchors = ['#fiber-processing', '#waste-collection', '#custom-blending'] %}
+
+    <div class="card-grid card-grid--3 stagger-children">
+      {% for card in services.overview %}
+        <div class="card fade-in">
+          <div class="card__icon">
+            {{ cardIcons[loop.index0] | safe }}
+          </div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+          <a href="{{ cardAnchors[loop.index0] }}" class="card__link">
+            View Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   OUR PROCESS
+   ============================================ #}
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="label">{{ services.processHeader.label }}</span>
+      <h2>{{ services.processHeader.title }}</h2>
+      <p>{{ services.processHeader.description }}</p>
+    </div>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="process-steps fade-in">
+        {% for step in services.process %}
+        <div class="process-step">
+          <div class="process-step__marker">{{ loop.index }}</div>
+          <div class="process-step__content">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   SERVICE DETAILS
+   ============================================ #}
+{% set detailSvgs = [
+  '<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="20" y="30" width="80" height="60" rx="5"/><path d="M35 50h50M35 60h50M35 70h50"/><path d="M20 45h-8M20 55h-8M20 65h-8"/><path d="M100 45h8M100 55h8M100 65h8"/></svg>',
+  '<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="10" y="40" width="60" height="40" rx="3"/><polygon points="70,50 95,50 105,65 105,80 70,80"/><circle cx="25" cy="85" r="8"/><circle cx="90" cy="85" r="8"/><path d="M33 80h37"/></svg>',
+  '<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="40" cy="50" r="20"/><circle cx="70" cy="50" r="20"/><circle cx="55" cy="75" r="20"/></svg>'
+] %}
+
+{% set sectionClasses = ['section', 'section section--gray', 'section'] %}
+{% set sectionIds = ['fiber-processing', 'waste-collection', 'custom-blending'] %}
+
+{% for detail in services.details %}
+<section class="{{ sectionClasses[loop.index0] }}" id="{{ sectionIds[loop.index0] }}">
+  <div class="container">
+    <div class="service-detail fade-in">
+      <div class="service-detail__content">
+        <span class="label">{{ detail.label }}</span>
+        <h3>{{ detail.title | safe }}</h3>
+        <p>{{ detail.description }}</p>
+        <ul>
+          {% for feature in detail.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        <a href="contact.html" class="btn btn--primary">{{ detail.ctaText }}</a>
+      </div>
+      <div class="service-detail__visual">
+        {{ detailSvgs[loop.index0] | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{# ============================================
+   CTA BANNER
+   ============================================ #}
+<section class="section section--gray">
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <h2>{{ services.ctaBanner.title }}</h2>
+      <p>{{ services.ctaBanner.description }}</p>
+      <a href="contact.html" class="btn btn--secondary btn--large">{{ services.ctaBanner.buttonText }}</a>
+    </div>
+  </div>
+</section>

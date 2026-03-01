@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "label": "Our Services",
+    "title": "End-to-End Textile Recycling Solutions",
+    "description": "From collection and sorting to processing and delivery, we handle every step of the fiber recycling process so you don't have to."
+  },
+  "overviewHeader": {
+    "label": "What We Offer",
+    "title": "Services Built Around Your Needs",
+    "description": "Whether you need to offload textile waste or source quality recycled fibers, we have the capabilities and experience to deliver."
+  },
+  "overview": [
+    {
+      "title": "Fiber Processing",
+      "description": "Our core service. We take raw textile waste and transform it into clean, graded, ready-to-use fibers through mechanical processing. From opening and cleaning to blending and baling, we handle it all."
+    },
+    {
+      "title": "Waste Collection & Logistics",
+      "description": "We coordinate the pickup, transportation, and receiving of textile waste from your facility. Scheduled or on-demand collection keeps your operation running smoothly."
+    },
+    {
+      "title": "Custom Blending & Grading",
+      "description": "Need a specific fiber composition? We create custom blends and grades to your exact specifications, ensuring consistent quality for your manufacturing process."
+    }
+  ],
+  "processHeader": {
+    "label": "How It Works",
+    "title": "Our Recycling Process",
+    "description": "A proven, systematic approach to transforming textile waste into high-quality recycled fibers."
+  },
+  "process": [
+    {
+      "title": "Collection & Receiving",
+      "description": "We collect textile waste directly from your facility or receive shipments at our processing plant. All incoming materials are documented and inspected upon arrival."
+    },
+    {
+      "title": "Sorting & Classification",
+      "description": "Materials are sorted by fiber type, color, and quality. This critical step ensures the right materials go into the right processing streams for optimal output quality."
+    },
+    {
+      "title": "Mechanical Processing",
+      "description": "Sorted materials are opened, cleaned, and processed through our equipment. Fibers are separated, contaminants removed, and material is prepared for its next use."
+    },
+    {
+      "title": "Blending & Quality Control",
+      "description": "Processed fibers are blended to meet customer specifications. Every batch undergoes quality checks to ensure consistency in fiber length, cleanliness, and composition."
+    },
+    {
+      "title": "Baling & Delivery",
+      "description": "Finished fibers are compressed into bales for efficient storage and transport. We coordinate delivery to your facility on your schedule."
+    }
+  ],
+  "details": [
+    {
+      "id": "fiber-processing",
+      "label": "Core Service",
+      "title": "Fiber Processing",
+      "description": "Our state-of-the-art processing facility handles a wide range of textile waste materials, transforming them into clean, graded fibers that are ready for reuse in manufacturing.",
+      "features": [
+        "Cotton, polyester, nylon, and blended fiber processing",
+        "Mechanical opening, cleaning, and fiber separation",
+        "Color sorting and contamination removal",
+        "Consistent output quality with batch-level documentation",
+        "Scalable capacity to match your volume requirements"
+      ],
+      "ctaText": "Discuss Your Requirements"
+    },
+    {
+      "id": "waste-collection",
+      "label": "Logistics",
+      "title": "Waste Collection & Transportation",
+      "description": "Getting your textile waste to us shouldn't be a headache. Our collection service handles the logistics so you can stay focused on your core business.",
+      "features": [
+        "Scheduled recurring pickups or on-demand collection",
+        "Containerized collection for easy loading at your facility",
+        "Regional coverage throughout the Northeast",
+        "Waste stream documentation and reporting",
+        "Help meeting your waste diversion and sustainability targets"
+      ],
+      "ctaText": "Schedule a Pickup"
+    },
+    {
+      "id": "custom-blending",
+      "label": "Tailored Solutions",
+      "title": "Custom Blending & Grading",
+      "description": "Not all fibers are created equal, and neither are your requirements. We work with you to develop custom fiber products that meet your exact production specifications.",
+      "features": [
+        "Custom fiber blends by composition, color, and staple length",
+        "Multiple grade levels to match your quality requirements",
+        "Sample runs and testing before full production",
+        "Consistent batch-to-batch quality",
+        "Technical consultation on fiber selection and performance"
+      ],
+      "ctaText": "Request a Custom Quote"
+    }
+  ],
+  "ctaBanner": {
+    "title": "Have a Unique Fiber Need?",
+    "description": "We've been solving fiber challenges for over a century. Tell us what you need, and we'll find a way to deliver.",
+    "buttonText": "Talk to Our Team"
+  }
+}

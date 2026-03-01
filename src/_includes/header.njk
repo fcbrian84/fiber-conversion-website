@@ -1,0 +1,28 @@
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <svg class="header__logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="10" fill="#1a5632"/>
+          <path d="M12 14h8v2h-8zM12 19h12v2h-12zM12 24h10v2h-10zM26 14c0 0 4 3 4 8s-4 8-4 8" stroke="#c89b3c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M30 16c0 0 3 2.5 3 6s-3 6-3 6" stroke="#c89b3c" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+        </svg>
+        <div class="header__logo-text">
+          <span class="company-name">{{ site.name }}</span>
+          <span class="tagline">{{ site.tagline }}</span>
+        </div>
+      </a>
+
+      <nav class="header__nav">
+        <a href="index.html"{% if activePage == "home" %} class="active"{% endif %}>Home</a>
+        <a href="about.html"{% if activePage == "about" %} class="active"{% endif %}>About</a>
+        <a href="services.html"{% if activePage == "services" %} class="active"{% endif %}>Services</a>
+        <a href="industries.html"{% if activePage == "industries" %} class="active"{% endif %}>Industries</a>
+        <a href="contact.html"{% if activePage == "contact" %} class="active"{% endif %}>Contact</a>
+        <a href="contact.html" class="btn btn--primary header__cta">Get a Quote</a>
+      </nav>
+
+      <button class="header__toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
