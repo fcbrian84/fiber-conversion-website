@@ -1,8 +1,5 @@
 {
   "hero": {
-    "heroImage": "",
-    "heroVideoUrl": "",
-    "heroVideoFile": "",
     "label": "Trusted Since 1909",
     "title": "Giving Textile Waste a",
     "titleHighlight": "Second Life",
@@ -10,9 +7,20 @@
     "primaryButtonText": "Explore Our Services",
     "secondaryButtonText": "Contact Us",
     "stats": [
-      { "number": "115+", "label": "Years in Business", "dataCount": "115", "dataSuffix": "+" },
-      { "number": "NY", "label": "Proudly Based" },
-      { "number": "100%", "label": "Commitment to Recycling" }
+      {
+        "number": "115+",
+        "label": "Years in Business",
+        "dataCount": "115",
+        "dataSuffix": "+"
+      },
+      {
+        "number": "NY",
+        "label": "Proudly Based"
+      },
+      {
+        "number": "100%",
+        "label": "Commitment to Recycling"
+      }
     ]
   },
   "servicesSection": {
@@ -20,20 +28,25 @@
     "title": "Comprehensive Textile Recycling Solutions",
     "description": "From collection to processing, we provide end-to-end fiber recycling services that keep textile waste out of landfills and back in the supply chain.",
     "cards": [
-      { "title": "Fiber Processing", "description": "We process raw textile waste into clean, graded fibers ready for reuse in manufacturing applications across multiple industries.", "image": "" },
-      { "title": "Waste Collection", "description": "Reliable pickup and collection services for textile manufacturers. We handle your waste streams so you can focus on production.", "image": "" },
-      { "title": "Custom Fiber Solutions", "description": "Need a specific fiber blend or grade? We work directly with you to develop custom recycled fiber products tailored to your specifications.", "image": "" }
+      {
+        "title": "Fiber Processing",
+        "description": "We process raw textile waste into clean, graded fibers ready for reuse in manufacturing applications across multiple industries."
+      },
+      {
+        "title": "Waste Collection",
+        "description": "Reliable pickup and collection services for textile manufacturers. We handle your waste streams so you can focus on production."
+      },
+      {
+        "title": "Custom Fiber Solutions",
+        "description": "Need a specific fiber blend or grade? We work directly with you to develop custom recycled fiber products tailored to your specifications. Color sorting available. "
+      }
     ]
   },
   "aboutPreview": {
-    "image": "",
-    "imageAlt": "",
-    "videoUrl": "",
-    "videoFile": "",
     "label": "Our Story",
     "title": "A Legacy of Sustainable Innovation",
     "paragraph1": "Since 1909, Fiber Conversion Inc. has been a cornerstone of the New York textile recycling industry. What started as a small fiber reclamation operation has grown into a full-service recycling and processing facility trusted by manufacturers across the Northeast.",
-    "paragraph2": "Every bale of fiber we process represents waste diverted from landfills and raw materials preserved for future generations. Our commitment to the circular economy isn't a trend \u2014 it's been our mission for over a century.",
+    "paragraph2": "Every bale of fiber we process represents waste diverted from landfills and raw materials preserved for future generations. Our commitment to the circular economy isn't a trend — it's been our mission for over a century.",
     "buttonText": "Read Our Full Story",
     "visualNumber": "1909",
     "visualLabel": "Year Established",
@@ -44,10 +57,22 @@
     "title": "Built on Experience. Driven by Sustainability.",
     "description": "We combine over a century of expertise with modern processing technology to deliver reliable, high-quality recycled fibers.",
     "values": [
-      { "title": "Trusted Heritage", "description": "Over 115 years of continuous operation, building relationships and delivering consistent quality to our partners.", "image": "" },
-      { "title": "Zero-Waste Goal", "description": "We are committed to diverting textile waste from landfills and maximizing the value of every fiber we process.", "image": "" },
-      { "title": "Custom Solutions", "description": "Every customer is unique. We tailor our fiber processing to match your exact specifications and delivery schedules.", "image": "" },
-      { "title": "Customer First", "description": "At Fiber Conversion, the customer always comes first. We build long-term partnerships rooted in reliability and trust.", "image": "" }
+      {
+        "title": "Trusted Heritage",
+        "description": "Over 115 years of continuous operation, building relationships and delivering consistent quality to our partners."
+      },
+      {
+        "title": "Zero-Waste Goal",
+        "description": "We are committed to diverting textile waste from landfills and maximizing the value of every fiber we process."
+      },
+      {
+        "title": "Custom Solutions",
+        "description": "Every customer is unique. We tailor our fiber processing to match your exact specifications and delivery schedules."
+      },
+      {
+        "title": "Customer First",
+        "description": "At Fiber Conversion, the customer always comes first. We build long-term partnerships rooted in reliability and trust."
+      }
     ]
   },
   "industriesSection": {
@@ -55,12 +80,30 @@
     "title": "Recycled Fibers for Every Application",
     "description": "Our processed fibers serve a wide range of industries, providing cost-effective and sustainable alternatives to virgin materials.",
     "items": [
-      { "title": "Automotive", "description": "Sound insulation, trunk liners & padding", "image": "" },
-      { "title": "Building & Insulation", "description": "Thermal & acoustic insulation products", "image": "" },
-      { "title": "Furniture & Bedding", "description": "Padding, stuffing & cushion materials", "image": "" },
-      { "title": "Nonwovens", "description": "Geotextiles, filtration & industrial fabrics", "image": "" },
-      { "title": "Paper & Pulp", "description": "Fiber feedstock for specialty paper products", "image": "" },
-      { "title": "Industrial Applications", "description": "Wiping cloths, absorbents & more", "image": "" }
+      {
+        "title": "Automotive",
+        "description": "Sound insulation, trunk liners & padding"
+      },
+      {
+        "title": "Building & Insulation",
+        "description": "Thermal & acoustic insulation products"
+      },
+      {
+        "title": "Furniture & Bedding",
+        "description": "Padding, stuffing & cushion materials"
+      },
+      {
+        "title": "Nonwovens",
+        "description": "Geotextiles, filtration & industrial fabrics"
+      },
+      {
+        "title": "Paper & Pulp",
+        "description": "Fiber feedstock for specialty paper products"
+      },
+      {
+        "title": "Industrial Applications",
+        "description": "Wiping cloths, absorbents & more"
+      }
     ]
   },
   "dualCta": {
@@ -70,14 +113,12 @@
     "sellCard": {
       "title": "Have Textile Waste?",
       "description": "We'll collect and process your textile byproducts, helping you reduce disposal costs and meet your sustainability targets.",
-      "buttonText": "Sell Your Waste",
-      "image": ""
+      "buttonText": "Sell Your Waste"
     },
     "buyCard": {
       "title": "Need Recycled Fibers?",
       "description": "Browse our selection of high-quality processed fibers, available in custom blends and grades to meet your production needs.",
-      "buttonText": "Request a Quote",
-      "image": ""
+      "buttonText": "Request a Quote"
     }
   },
   "ctaBanner": {
